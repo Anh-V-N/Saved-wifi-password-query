@@ -23,6 +23,8 @@ if 'win' in sys.platform:  # Windows platform
             if 'Key Content' in line:
                 password = line.split(':')[1].strip()
                 print("Password for SSID %s is %s" % (wifi_ssid, password))
+    input('Press enter to exit...')
+
 elif 'linux' in sys.platform:   # Linux platform
     os.chdir('/etc/NetworkManager/system-connections/')  # Move to folder
     saved_ssids = os.listdir()  # List of saved SSIDs
